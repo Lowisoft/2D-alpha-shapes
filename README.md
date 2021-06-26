@@ -1,6 +1,6 @@
 # 2D Alpha Shapes Visualizer
-version 1.0
-made by Loris Wilwert (2021)
+version 1.0<br/>
+made by Loris Wilwert (2021)<br/>
 for Selected Topics in Computational Geometry (S_ATDAG)
 
 ### REQUIRED LIBRARIES
@@ -13,25 +13,25 @@ for Selected Topics in Computational Geometry (S_ATDAG)
 
 
 ### DESCRIPTION
-This program visually shows 2D alpha shapes for different alpha values.
+This program visually shows 2D alpha shapes for different alpha values.<br/>
 Since the alpha shape for positive resp. negative alpha is a subgraph of the furthest resp. closest Delaunay 
 triangulation, we first compute the triangulation by using the "scipy" library.
 Then we loop through the different edges of the triangles, construct for each edge the two discs with radius 1/|alpha| 
-and with the endpoints of the edge on its boundary. 
+and with the endpoints of the edge on its boundary.
 Next we check for both discs, if every  point (for alpha > 0) or if no point (for alpha < 0) lies inside the discs.
 If we find such a disc (one is sufficient), then the disc is a generalized disk, the endpoints of the edge are alpha 
-neighbors and the edge is part of the alpha shape.
-For alpha = 0, we use the Graham scan algorithm to determine the convex hull, which is equal to the 0-shape.
+neighbors and the edge is part of the alpha shape.<br/>
+For alpha = 0, we use the Graham scan algorithm to determine the convex hull, which is equal to the 0-shape.<br/>
 The program uses "pygame" for an underling visualizer, although a switch to another GUI would not require too much effort.
 
 ### COMPLEXITY
-Let n be the number of drawn points.
+Let n be the number of drawn points.<br/>
 The computation of the Delaunay triangulation by the "scipy" library needs O(n * log(n)) time, which is optimal.
 However, we need O(n^2) time for the construction of the alpha shapes, because the Delaunay triangulation contains O(n) 
 simplices/triangles and for every edge of a simplex (= constant amount) we need O(n) time to check if the edge is part 
-of the alpha shapes (by looping through the n points).
+of the alpha shapes (by looping through the n points).<br/>
 So for alpha > 0 and for alpha < 0 we end up with a time complexity of O(n^2) which is a bit slower than the optimal
-complexity of O(n * log(n)). For alpha = 0, we use the Graham scan, which has a time complexity of O(n * log(n)).
+complexity of O(n * log(n)). For alpha = 0, we use the Graham scan, which has a time complexity of O(n * log(n)).<br/>
 In terms of space complexity, the program has the optimal complexity of O(n). 
 
 ### RESTRICTIONS
