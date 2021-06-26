@@ -3,6 +3,13 @@ version 1.0<br/>
 made by Loris Wilwert (2021)<br/>
 for Selected Topics in Computational Geometry (S_ATDAG)
 
+### INSTALLATION
+
+1. Download the file ```alpha_shape_2d.py```
+2. Open a new python project (e.g. in PyCharm)
+3. Add the required libraries (listed below)
+4. Run the file
+
 ### REQUIRED LIBRARIES
 * pygame
 * scipy
@@ -10,7 +17,6 @@ for Selected Topics in Computational Geometry (S_ATDAG)
 * numpy
 * copy
 * math
-
 
 ### DESCRIPTION
 This program visually shows 2D alpha shapes for different alpha values.<br/>
